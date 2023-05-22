@@ -1,3 +1,16 @@
+<?php
+
+global $koneksi;
+include('koneksi.php');
+
+$id = $_GET['id'];
+
+$admin = mysqli_query($koneksi, "SELECT * FROM admin WHERE id_admin = '$id'");
+
+$row = mysqli_fetch_array($admin);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -113,7 +126,7 @@
                             <div class="card-header">
                                 <h4>Data Admin</h4>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body class="table-responsive"">
                                 <table class="table" id="datatablesSimple">
                                     <thead>
                                         <tr>
@@ -136,7 +149,7 @@
                                             <td><?php echo $d['email']; ?></td>
                                             <td><?php echo $d['password']; ?></td>
                                             <td>
-                                                <a role ="button" class="btn btn-info" href="edit.php>">UBAH</a> </button>
+                                                <a role ="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">UBAH</a> </button>
                                                 <a role ="button" class="btn btn-danger" href="hapusadmin.php?id=<?php echo $d['id_admin']; ?>">HAPUS</a>
                                             </td>
                                         </tr>
@@ -149,6 +162,41 @@
                         </div>
                     </div>
                 </main>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Update Data Admin</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="row g-3 mt-1 mb-3" method="post" action="updateadmin.php">
+                                    <div class="row m-1">
+                                        <div class="col-12 mb-3">
+                                            <input type="text" value="<?php echo $row['id_admin'] ?>" name="id_admin" class="form-control" placeholder="ID Admin">
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <input type="text" value="<?php echo $row['nama'] ?>" name="nama" class="form-control" placeholder="Nama">
+                                        </div>
+                                        <div class="col-12 mb-3"">
+                                            <input type="text" value="<?php echo $row['email'] ?>" name="email" class="form-control" placeholder="Email">
+                                        </div>
+                                        <div class="col-12 mb-3"">
+                                            <input type="text" value="<?php echo $row['password'] ?>" name="password" class="form-control" placeholder="Password">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                <button type="button" class="btn btn-primary">Simpan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
