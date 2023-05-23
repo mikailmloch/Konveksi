@@ -52,10 +52,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Beranda</a>
-                <a href="service_kami.html" class="nav-item nav-link">Service Kami</a>
-                <a href="portofolio.html" class="nav-item nav-link">Portofolio</a>
-                <a href="kontak.html" class="nav-item nav-link">Kontak</a>
+                <a href="index.php" class="nav-item nav-link active">Beranda</a>
+                <a href="service_kami.php" class="nav-item nav-link">Service Kami</a>
+                <a href="portofolio.php" class="nav-item nav-link">Portofolio</a>
+                <a href="kontak.php" class="nav-item nav-link">Kontak</a>
             </div>
         </div>
     </nav>

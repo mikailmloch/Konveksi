@@ -44,7 +44,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h2 class="m-0 text-primary"><i class="fa fa-shirt me-3"></i>Konveksi Cecep</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -52,10 +52,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link ">Beranda</a>
-                <a href="service_kami.html" class="nav-item nav-link">Service Kami</a>
-                <a href="portofolio.html" class="nav-item nav-link active">Portofolio</a>
-                <a href="kontak.html" class="nav-item nav-link">Kontak</a>
+                <a href="index.php" class="nav-item nav-link ">Beranda</a>
+                <a href="service_kami.php" class="nav-item nav-link">Service Kami</a>
+                <a href="portofolio.php" class="nav-item nav-link active">Portofolio</a>
+                <a href="kontak.php" class="nav-item nav-link">Kontak</a>
             </div>
         </div>
     </nav>
@@ -70,7 +70,7 @@
                     <h1 class="display-3 text-white animated slideInDown">Portofolio</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">Courses</li>
                         </ol>
                     </nav>
