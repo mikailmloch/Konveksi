@@ -297,7 +297,7 @@
         <div class="container py-5">
             <div class="row g-5 justify-content-center">
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
+                    <h4 class="text-white mb-3">Contacts</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. U Suryadi No.58 RT03 RW13, Kertajaya, Kec. Padalarang, Kab. Bandung Barat</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0877-2037-9998</p>
                     <div class="d-flex pt-2">
