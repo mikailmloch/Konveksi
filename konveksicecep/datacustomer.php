@@ -1,4 +1,18 @@
-global$koneksi; <!DOCTYPE html>
+global$koneksi; global$koneksi;
+<?php
+
+    global $koneksi;
+    include('koneksi.php');
+
+    $id = $_GET['id'];
+
+    $cust = mysqli_query($koneksi, "SELECT * FROM customer WHERE id_customer = '$id'");
+
+    $d = mysqli_fetch_array($cust);
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -151,7 +165,7 @@ global$koneksi; <!DOCTYPE html>
                                             <td><?php echo $d['jumlah']; ?></td>
                                             <td><?php echo $d['status']; ?></td>
                                             <td>
-                                                <a role ="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">UBAH</a>
+                                                <a role ="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop?id=<?php echo $d['id_customer']; ?>">UBAH</a>
                                                 <a role ="button" class="btn btn-danger" href="hapuscustomer.php?id=<?php echo $d['id_customer']; ?>">HAPUS</a>
                                             </td>
                                         </tr>
@@ -166,7 +180,7 @@ global$koneksi; <!DOCTYPE html>
                 </main>
 
                 <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal fade" id="staticBackdrop<?php echo $d['id_customer']; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -174,40 +188,31 @@ global$koneksi; <!DOCTYPE html>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <?php
-                                include 'koneksi.php';
-                                $id = $_GET['id'];
-                                $data = mysqli_query($koneksi,"select * from customer where id='$id'");
-                                while($row = mysqli_fetch_array($data)){
-                                ?>
-                                <form class="row g-3 mt-1 mb-3" method="post" action="updatecustomer.php">
+                                <form class="row g-3 mt-1 mb-3" method="POST" action="updatecustomer.php">
                                     <div class="row m-1">
                                         <div class="col-12 mb-3">
-                                            <input type="text" value="<?php echo $row['id_customer']; ?>" name="id_customer" class="form-control" placeholder="ID Customer">
+                                            <input type="text" value="<?php echo $d['id_customer']; ?>" name="id_customer" class="form-control" placeholder="ID Customer">
                                         </div>
                                         <div class="col-12 mb-3">
-                                            <input type="text" value="<?php echo $row['nama']; ?>" name="nama" class="form-control" placeholder="Nama">
+                                            <input type="text" value="<?php echo $d['nama']; ?>" name="nama" class="form-control" placeholder="Nama">
                                         </div>
                                         <div class="col-12 mb-3">
-                                            <input type="text" value="<?php echo $row['notelepon']; ?>" name="notelepon" class="form-control" placeholder="No. Telepon">
+                                            <input type="text" value="<?php echo $d['notelepon']; ?>" name="notelepon" class="form-control" placeholder="No. Telepon">
                                         </div>
                                         <div class="col-12 mb-3">
-                                            <input type="text" value="<?php echo $row['alamat']; ?>" name="alamat" class="form-control" placeholder="Alamat">
+                                            <input type="text" value="<?php echo $d['alamat']; ?>" name="alamat" class="form-control" placeholder="Alamat">
                                         </div>
                                         <div class="col-12 mb-3">
-                                            <input type="text" value="<?php echo $row['produkpesanan']; ?>" name="produkpesanan" class="form-control" placeholder="Produk Pesanan">
+                                            <input type="text" value="<?php echo $d['produkpesanan']; ?>" name="produkpesanan" class="form-control" placeholder="Produk Pesanan">
                                         </div>
                                         <div class="col-12 mb-3">
-                                            <input type="text" value="<?php echo $row['jumlah']; ?>" name="jumlah" class="form-control" placeholder="Jumlah">
+                                            <input type="text" value="<?php echo $d['jumlah']; ?>" name="jumlah" class="form-control" placeholder="Jumlah">
                                         </div>
                                         <div class="col-12 mb-3">
-                                            <input type="text" value="<?php echo $row['status']; ?>" name="status" class="form-control" placeholder="Status">
+                                            <input type="text" value="<?php echo $d['status']; ?>" name="status" class="form-control" placeholder="Status">
                                         </div>
                                     </div>
                                 </form>
-                                    <?php
-                                }
-                                ?>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>

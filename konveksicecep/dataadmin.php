@@ -1,13 +1,13 @@
 <?php
 
-global $koneksi;
-include('koneksi.php');
+    global $koneksi;
+    include('koneksi.php');
 
-$id = $_GET['id'];
+    $id = $_GET['id'];
 
-$admin = mysqli_query($koneksi, "SELECT * FROM admin WHERE id_admin = '$id'");
+    $admin = mysqli_query($koneksi, "SELECT * FROM admin WHERE id_admin = '$id'");
 
-$row = mysqli_fetch_array($admin);
+    $d = mysqli_fetch_array($admin);
 
 ?>
 
@@ -149,7 +149,7 @@ $row = mysqli_fetch_array($admin);
                                             <td><?php echo $d['email']; ?></td>
                                             <td><?php echo $d['password']; ?></td>
                                             <td>
-                                                <a role ="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop">UBAH</a>
+                                                <a role="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop?id=<?php echo $d['id_admin']; ?>">UBAH</a>
                                                 <a role ="button" class="btn btn-danger" href="hapusadmin.php?id=<?php echo $d['id_admin']; ?>">HAPUS</a>
                                             </td>
                                         </tr>
@@ -164,7 +164,7 @@ $row = mysqli_fetch_array($admin);
                 </main>
 
                 <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal fade" id="staticBackdrop<?php echo $d['id_admin']; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -175,16 +175,16 @@ $row = mysqli_fetch_array($admin);
                                 <form class="row g-3 mt-1 mb-3" method="post" action="updateadmin.php">
                                     <div class="row m-1">
                                         <div class="col-12 mb-3">
-                                            <input type="text" value="<?php echo $row['id_admin'] ?>" name="id_admin" class="form-control" placeholder="ID Admin">
+                                            <input type="text" value="<?php echo $d['id_admin'] ?>" name="id_admin" class="form-control" placeholder="ID Admin">
                                         </div>
                                         <div class="col-12 mb-3">
-                                            <input type="text" value="<?php echo $row['nama'] ?>" name="nama" class="form-control" placeholder="Nama">
+                                            <input type="text" value="<?php echo $d['nama'] ?>" name="nama" class="form-control" placeholder="Nama">
                                         </div>
                                         <div class="col-12 mb-3"">
-                                            <input type="text" value="<?php echo $row['email'] ?>" name="email" class="form-control" placeholder="Email">
+                                            <input type="text" value="<?php echo $d['email'] ?>" name="email" class="form-control" placeholder="Email">
                                         </div>
                                         <div class="col-12 mb-3"">
-                                            <input type="text" value="<?php echo $row['password'] ?>" name="password" class="form-control" placeholder="Password">
+                                            <input type="text" value="<?php echo $d['password'] ?>" name="password" class="form-control" placeholder="Password">
                                         </div>
                                     </div>
                                 </form>
