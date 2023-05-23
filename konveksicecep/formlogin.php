@@ -12,6 +12,7 @@
 
 </head>
 <body>
+<a href="../index.php" class="btn btn-danger btn-user btn-block">Kembali</a>
 <div class="container" style="margin-top: 100px; width: 500px;">
     <div class="mt-4 p-5 bg-light">
         <h2>Konveksi Cecep</h2>
