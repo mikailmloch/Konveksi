@@ -443,7 +443,7 @@
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Jl. U Suryadi No.58 RT03 RW13, Kertajaya, Kec. Padalarang, Kab. Bandung Barat</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0877-2037-9998</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="wa.me/6287720379998"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://api.whatsapp.com/send/?phone=6287720379998&text&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://goo.gl/maps/AmmiJU78oZJ1s2fm6?coh=178571&entry=tt"><i class="fa-solid fa-map-location-dot"></i></a>
                     </div>
                 </div>
