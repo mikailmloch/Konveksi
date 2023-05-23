@@ -432,3 +432,9 @@
     padding-right: 0;
     border-right: none;
 }
+
+.team-item img {
+    width: 300px; /* Ubah ukuran ini sesuai kebutuhan Anda */
+    height: 300px; /* Ubah ukuran ini sesuai kebutuhan Anda */
+    object-fit: cover;
+}
