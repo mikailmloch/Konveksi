@@ -57,6 +57,7 @@
                 <a href="portofolio.php" class="nav-item nav-link">Portofolio</a>
                 <a href="kontak.php" class="nav-item nav-link active">Kontak</a>
             </div>
+            <a href="konveksicecep/formlogin.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Login Admin</a>
         </div>
     </nav>
     <!-- Navbar End -->

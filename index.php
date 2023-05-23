@@ -57,6 +57,7 @@
                 <a href="portofolio.php" class="nav-item nav-link">Portofolio</a>
                 <a href="kontak.php" class="nav-item nav-link">Kontak</a>
             </div>
+            <a href="konveksicecep/formlogin.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Login Admin</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -74,6 +75,7 @@
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Konveksi Terbaik</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Konveksi Terbaik di Padalarang</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Kami memberikan pelayanan yang terbaik untuk para konsumen-konsumen kami yang terhormat.</p>
+                                <a href="service_kami.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Service Kami</a>
                             </div>
                         </div>
                     </div>

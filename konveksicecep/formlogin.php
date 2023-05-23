@@ -24,7 +24,7 @@
                 <label for="password" class="form-label">Password:</label>
                 <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
             </div>
-            <button type="submit" class="btn btn-dark btn-user btn-block">Masuk Admin</button>
+            <button type="submit" class="btn btn-info btn-user btn-block">Masuk Admin</button>
         </form>
     </div>
 </div>
