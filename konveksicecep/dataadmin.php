@@ -149,7 +149,7 @@
                                             <td><?php echo $d['email']; ?></td>
                                             <td><?php echo $d['password']; ?></td>
                                             <td>
-                                                <a role="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop?id=<?php echo $d['id_admin']; ?>">UBAH</a>
+                                                <a role="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="edit_button_<?php echo $d['id_admin']; ?>">UBAH</a>
                                                 <a role ="button" class="btn btn-danger" href="hapusadmin.php?id=<?php echo $d['id_admin']; ?>">HAPUS</a>
                                             </td>
                                         </tr>
