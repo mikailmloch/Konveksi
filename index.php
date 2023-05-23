@@ -90,6 +90,7 @@
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Konveksi Terbaik</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Pakaian yang dihasilkan selalu memuaskan</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">Kami membuat pakaian menggunakan bahan-bahan yang terbaik di kelasnya.</p>
+                                <a href="service_kami.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Service Kami</a>
                             </div>
                         </div>
                     </div>
@@ -103,6 +104,10 @@
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Partner Bisnis Terbaik Anda</h6>
+                <h1 class="mb-5">Harga dan Kualitas Terbaik</h1>
+            </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item text-center pt-3">
@@ -238,6 +243,7 @@
                         </div>
                     </div>
                 </div>
+                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"><i class="fa-brands fa-whatsapp m-2"></i>Hubungi Kami</a>
             </div>
         </div>
     </div>
