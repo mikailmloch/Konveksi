@@ -302,7 +302,7 @@
                     </div>
                 </div>
             </div>
-            <a href="" class="btn btn-primary mt-5 py-md-3 px-md-5 me-3 animated slideInLeft"><i class="fa-brands fa-whatsapp m-2"></i>Hubungi Kami</a>
+            <a href="https://api.whatsapp.com/send?phone=+6281234567890" class="btn btn-primary mt-5 py-md-3 px-md-5 me-3 animated slideInLeft"><i class="fa-brands fa-whatsapp m-2"></i>Hubungi Kami</a>
         </div>
     </div>
 </div>

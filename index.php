@@ -243,7 +243,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"><i class="fa-brands fa-whatsapp m-2"></i>Hubungi Kami</a>
+                <a href="https://api.whatsapp.com/send?phone=+6282121268147" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"><i class="fa-brands fa-whatsapp m-2"></i>Hubungi Kami</a>
             </div>
         </div>
     </div>
